@@ -1,0 +1,18 @@
+.o-design {
+
+  .color {
+
+    @include color('third');
+  }
+
+
+  @include breakpoint-up('md') {
+    height: 41.125rem;
+  }
+
+  @include breakpoint-up('lg') {
+    height: 61.5rem;
+  }
+  
+}
+

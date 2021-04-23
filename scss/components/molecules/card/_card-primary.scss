@@ -1,24 +1,54 @@
 .m-card-primary {
   @extend .m-card;
+  @include bg-color('primary');
+  @include color('second');
+
+
+  @include breakpoint-up('md') {
+    display: grid;
+    grid-template-columns: 51% 49%;
+  }
+
+}
+
+
+.m-card-primary {
 
   .header {
 
-    width: 100%;
+    .md-img, .lg-img {
+
+      width: 100%;
+      //height: 100%;
+    }
+
   }
 
+}
+
+
+.m-card-primary {
+
+  
   .body {
 
-    width: 100%;
-
-    .m-separator-primary {
-      margin: 3rem auto;
+    @include padding-y(4.5rem);
 
 
-      @include breakpoint-up('lg') {
-        text-align: left;
-      }
-      
+    .a-btn-third {
+
+      margin-top: 2.5rem;
     }
-    
+
+
+    @include breakpoint-up('md') {
+      @include padding-y(7.5rem);
+    }
+
+    @include breakpoint-up('lg') {
+      @include padding-y(12.5rem);
+    }
+
   }
+
 }

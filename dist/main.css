@@ -445,6 +445,7 @@ a {
 
 .a-btn, .a-btn-primary, .a-btn-second, .a-btn-third, .a-btn-fourth {
   text-align: center;
+  border: 0;
 }
 
 .a-btn:hover, .a-btn-primary:hover, .a-btn-second:hover, .a-btn-third:hover, .a-btn-fourth:hover {
@@ -461,7 +462,6 @@ a {
 
 .a-btn-primary, .a-btn-second {
   padding: 1.3rem 1.1rem;
-  border: 0;
   color: white;
   background-color: black;
 }
@@ -484,14 +484,18 @@ a {
 }
 
 .a-btn-third {
-  padding: 1.5rem 3.375rem;
-  border-color: #f94e4e;
+  padding: 0;
+  background-color: black;
   color: #f94e4e;
-  background-color: transparent;
 }
 
 .a-btn-third:hover {
-  color: #f94e4e;
+  opacity: 1;
+  color: #ffc2c2;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .a-btn-fourth {
@@ -707,6 +711,27 @@ a {
   text-align: left;
 }
 
+.m-text-block-third {
+  text-align: left;
+  color: white;
+}
+
+.m-text-block-third .a-heading-2, .m-text-block-third .a-heading-3 {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .m-text-block-third .a-heading-2, .m-text-block-third .a-heading-3 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .m-text-block-third .a-heading-2, .m-text-block-third .a-heading-3 {
+    margin-bottom: 2.5rem;
+  }
+}
+
 @media screen and (min-width: 62rem) {
   .m-cards-primary .m-card-second .body .m-text-block, .m-cards-primary .m-card-second .body .m-text-block-primary, .m-cards-primary .m-card-second .body .m-text-block-second {
     text-align: left;
@@ -745,42 +770,51 @@ a {
 
 .m-card .header, .m-card-primary .header, .m-card-second .header {
   width: 100%;
-  text-align: center;
 }
 
 .m-card .body, .m-card-primary .body, .m-card-second .body {
   width: 100%;
 }
 
-.m-card-primary .header {
+.m-card-primary {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (min-width: 62rem) {
+  .m-card-primary {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 51% 49%;
+        grid-template-columns: 51% 49%;
+  }
+}
+
+.m-card-primary .header .md-img, .m-card-primary .header .lg-img {
   width: 100%;
 }
 
 .m-card-primary .body {
-  width: 100%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
-.m-card-primary .body .m-separator-primary {
-  margin: 3rem auto;
+.m-card-primary .body .a-btn-third {
+  margin-top: 2.5rem;
 }
 
-@media screen and (min-width: 90rem) {
-  .m-card-primary .body .m-separator-primary {
-    text-align: left;
+@media screen and (min-width: 62rem) {
+  .m-card-primary .body {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 }
 
-.m-card-second .body {
-  margin-top: 1.5rem;
-}
-
-.m-card-second .body .m-list, .m-card-second .body .m-list-second {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.m-card-second .body .m-text-block-second {
-  margin-top: 3rem;
+@media screen and (min-width: 90rem) {
+  .m-card-primary .body {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
 }
 
 .m-list .a-link, .m-list-second .a-link, .m-list .a-link-primary, .m-list-second .a-link-primary, .m-list .a-text, .m-list-second .a-text, .m-list .a-text-warning, .m-list-second .a-text-warning {
@@ -1128,7 +1162,8 @@ a {
 
 .o-about {
   display: block;
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 6rem;
 }
 
 .o-about .a-btn-second {
@@ -1138,6 +1173,22 @@ a {
 @media screen and (min-width: 62rem) {
   .o-about {
     display: none;
+  }
+}
+
+.o-design .color {
+  color: #f94e4e;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-design {
+    height: 41.125rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .o-design {
+    height: 61.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
