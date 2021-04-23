@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,MAAM;CAKnB",
+    "sources": [
+        "../scss/components/organisms/sections/about.scss"
+    ],
+    "names": [],
+    "file": "about.css"
+}
