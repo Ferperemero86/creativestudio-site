@@ -1,0 +1,15 @@
+.m-menu-primary {
+  @extend .m-menu;
+
+  .a-link {
+    @include color('second');
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  
+  }
+ 
+  
+}
+

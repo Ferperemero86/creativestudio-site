@@ -1,0 +1,17 @@
+.m-separator-primary {
+  @extend .m-separator;
+
+  .circle {
+
+    width: 0.5rem;
+    height: 0.5rem;
+    @include b-color('primary-1');
+  }
+
+  .line {
+
+    width: 5rem;
+    @include b-color('primary-1');
+  }
+  
+}

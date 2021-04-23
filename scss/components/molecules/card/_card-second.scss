@@ -1,0 +1,21 @@
+.m-card-second {
+  @extend .m-card;
+
+  .body {
+
+    margin-top: 1.5rem;
+
+    .m-list {
+
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .m-text-block-second {
+
+      margin-top: 3rem;
+    }
+
+  }
+
+}
