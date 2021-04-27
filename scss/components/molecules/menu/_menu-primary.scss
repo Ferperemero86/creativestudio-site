@@ -6,6 +6,11 @@
 
     &:not(:last-child) {
       margin-right: 1rem;
+
+
+      @include breakpoint-up('md') {
+        margin-right: 2rem;
+      }
     }
   
   }

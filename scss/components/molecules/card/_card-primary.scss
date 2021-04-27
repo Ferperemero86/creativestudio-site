@@ -12,27 +12,19 @@
 }
 
 
-.m-card-primary {
+.m-card-primary-header {
 
-  .header {
+  .md-img, .lg-img {
 
-    .md-img, .lg-img {
-
-      width: 100%;
-      //height: 100%;
-    }
-
+    width: 100%;
   }
 
 }
 
 
-.m-card-primary {
+.m-card-primary-body {
 
-  
-  .body {
-
-    @include padding-y(4.5rem);
+  @include padding-y(4.5rem);
 
 
     .a-btn-third {
@@ -49,6 +41,6 @@
       @include padding-y(12.5rem);
     }
 
-  }
-
 }
+
+
