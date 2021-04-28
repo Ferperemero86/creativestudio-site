@@ -87,6 +87,16 @@ a {
   height: auto;
 }
 
+.slide-out-left {
+  visibility: hidden;
+  margin-left: 100%;
+}
+
+.slide-in {
+  margin-left: 0rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
 
 // Visibility //
 

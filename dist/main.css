@@ -425,6 +425,17 @@ a {
   height: auto;
 }
 
+.slide-out-left {
+  visibility: hidden;
+  margin-left: 100%;
+}
+
+.slide-in {
+  margin-left: 0rem;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -1030,6 +1041,10 @@ a {
   .m-menu-primary .a-link:not(:last-child), .m-menu-primary .a-link-primary:not(:last-child) {
     margin-right: 2rem;
   }
+}
+
+.m-slider {
+  width: 100%;
 }
 
 .o-header, .o-header-primary, .o-header-second {
