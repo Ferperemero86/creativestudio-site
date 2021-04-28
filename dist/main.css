@@ -445,7 +445,7 @@ a {
 }
 
 .show {
-  margin-top: 0;
+  margin-top: 21.5rem;
   -webkit-transition-property: "opacity";
   transition-property: "opacity";
   -webkit-transition-duration: 1s;
@@ -806,13 +806,10 @@ a {
 }
 
 .m-vertical-menu {
-  position: absolute;
-  right: 5rem;
   width: 15rem;
   padding: 2rem 0;
   text-align: center;
   background-color: black;
-  z-index: 9999;
 }
 
 .m-vertical-menu .link {
@@ -825,12 +822,6 @@ a {
 
 .m-vertical-menu .btn {
   margin-top: 1rem;
-}
-
-@media screen and (min-width: 62rem) {
-  .m-vertical-menu {
-    display: none;
-  }
 }
 
 .m-slider {
@@ -911,6 +902,24 @@ a {
   .o-menu-bar-primary {
     height: 11.125rem;
     padding-right: 0;
+  }
+}
+
+.o-menu-bar-primary.fixed {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+}
+
+.o-menu-bar-primary .m-vertical-menu {
+  position: absolute;
+  right: 5rem;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-menu-bar-primary .m-vertical-menu {
+    display: none;
   }
 }
 

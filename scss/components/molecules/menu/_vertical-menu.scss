@@ -1,11 +1,8 @@
 .m-vertical-menu {
-  position: absolute;
-  right: 5rem;
   width: 15rem;
   padding: 2rem 0;
   text-align: center;
   @include bg-color('primary');
-  z-index: 9999;
 
   .link {
 
@@ -21,11 +18,6 @@
   .btn {
 
     margin-top: 1rem;
-  }
-
-
-  @include breakpoint-up('md') {
-    display: none;
   }
 
 }

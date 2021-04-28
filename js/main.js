@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Menu bar
+  const menuBar = document.querySelector('.menu-bar');
+
+  document.addEventListener('scroll', function(e) {
+    if (window.pageYOffset > menuBar.offsetTop) {
+      menuBar.classList.add('fixed');
+
+    } else {
+      menuBar.classList.remove('fixed');
+    }
+  })
+
   // Main menu
   const hamburger = document.querySelector('.a-hamburger');
   const verticalMenu = document.querySelector('.m-vertical-menu');
