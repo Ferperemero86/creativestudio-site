@@ -437,17 +437,15 @@ a {
 }
 
 .hidden {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition-property: "opacity";
-  transition-property: "opacity";
+  margin-top: -500px;
+  -webkit-transition-property: "margin-top";
+  transition-property: "margin-top";
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
 
 .show {
-  visibility: visible;
-  opacity: 1;
+  margin-top: 0;
   -webkit-transition-property: "opacity";
   transition-property: "opacity";
   -webkit-transition-duration: 1s;
@@ -680,7 +678,7 @@ a {
 }
 
 .a-link-primary {
-  color: #f94e4e;
+  color: white;
 }
 
 .a-input, .a-input-primary {
@@ -1040,6 +1038,34 @@ a {
 @media screen and (min-width: 62rem) {
   .m-menu-primary .a-link:not(:last-child), .m-menu-primary .a-link-primary:not(:last-child) {
     margin-right: 2rem;
+  }
+}
+
+.m-vertical-menu {
+  position: absolute;
+  right: 5rem;
+  width: 15rem;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: black;
+  z-index: 9999;
+}
+
+.m-vertical-menu .link {
+  display: block;
+}
+
+.m-vertical-menu .link:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.m-vertical-menu .btn {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .m-vertical-menu {
+    display: none;
   }
 }
 

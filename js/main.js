@@ -1,5 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // Main menu
+  const hamburger = document.querySelector('.a-hamburger');
+  const verticalMenu = document.querySelector('.m-vertical-menu');
+
+  hamburger.addEventListener('click', function() {
+    if (verticalMenu.classList.contains('hidden')) {
+      verticalMenu.classList.remove('hidden');
+      verticalMenu.classList.add('show');
+
+    } else {
+      verticalMenu.classList.add('hidden');
+      verticalMenu.classList.remove('show');
+    }
+  });
+
+
   // Projects slider
   const bodyContentBtn = document.querySelector('.o-projects .body-content-btn');
   const headerImg = document.querySelectorAll('.o-projects img');

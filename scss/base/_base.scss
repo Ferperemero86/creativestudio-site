@@ -101,14 +101,12 @@ a {
 // Visibility //
 
 .hidden {
-  visibility: hidden;
-  opacity: 0;
-  @include transition('opacity', 1s);
+  margin-top: -500px;
+  @include transition('margin-top', 1s);
 }
 
 .show {
-  visibility: visible;
-  opacity: 1;
+  margin-top: 0;
   @include transition('opacity', 1s);
 }
 
