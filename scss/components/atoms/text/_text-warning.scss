@@ -1,9 +1,0 @@
-.a-text-warning {
-  @extend .a-text;
-  
-  &::-webkit-input-placeholder {
-
-    @include color('warning');
-  }
-
-}
