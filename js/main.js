@@ -13,19 +13,23 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   // Main menu
-  const hamburger = document.querySelector('.a-hamburger');
+  const hamburger = document.querySelector('.hamburger');
+  const closeIcon = document.querySelector('.close-icon');
   const verticalMenu = document.querySelector('.m-vertical-menu');
 
   hamburger.addEventListener('click', function() {
-    if (verticalMenu.classList.contains('hidden')) {
-      verticalMenu.classList.remove('hidden');
-      verticalMenu.classList.add('show');
-
-    } else {
-      verticalMenu.classList.add('hidden');
-      verticalMenu.classList.remove('show');
-    }
+    verticalMenu.classList.remove('slide-up');
+    verticalMenu.classList.add('slide-down');
+    hamburger.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
   });
+
+  closeIcon.addEventListener('click', function() {
+    verticalMenu.classList.add('slide-up');
+    verticalMenu.classList.remove('slide-down');
+    hamburger.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  })
 
 
   // Projects slider

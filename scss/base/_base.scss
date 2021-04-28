@@ -101,11 +101,19 @@ a {
 // Visibility //
 
 .hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.slide-up {
   margin-top: -500px;
   @include transition('margin-top', 1s);
 }
 
-.show {
+.slide-down {
   margin-top: 21.5rem;
   @include transition('opacity', 1s);
 }

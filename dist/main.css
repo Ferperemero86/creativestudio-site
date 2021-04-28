@@ -437,6 +437,14 @@ a {
 }
 
 .hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.slide-up {
   margin-top: -500px;
   -webkit-transition-property: "margin-top";
   transition-property: "margin-top";
@@ -444,7 +452,7 @@ a {
           transition-duration: 1s;
 }
 
-.show {
+.slide-down {
   margin-top: 21.5rem;
   -webkit-transition-property: "opacity";
   transition-property: "opacity";
@@ -649,34 +657,12 @@ a {
 }
 
 .a-close-icon, .a-close-icon-primary {
-  position: relative;
-}
-
-.a-close-icon:after, .a-close-icon-primary:after {
-  content: '';
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.a-close-icon:before, .a-close-icon-primary:before {
-  content: '';
-  position: absolute;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  display: inline-block;
 }
 
 .a-close-icon-primary {
-  width: 30px;
-  height: 30px;
-  left: 100%;
-  top: -1rem;
-}
-
-.a-close-icon-primary:after, .a-close-icon-primary:before {
-  height: 30px;
-  border-left: 2px solid;
-  left: 14px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .a-hamburger {
