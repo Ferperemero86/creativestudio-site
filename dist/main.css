@@ -1346,38 +1346,62 @@ a {
 
 .o-projects {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .o-projects-header {
-  width: 50%;
+  width: 100%;
+  background-color: black;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-projects-header {
+    width: 50%;
+    background: none;
+  }
 }
 
 .o-projects-body {
+  width: 100%;
   background-color: black;
-  position: absolute;
-  left: 0;
-  width: 55%;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-right: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.o-projects-body .body-btn {
-  margin-top: 4rem;
+.o-projects-body .body-content .body-content-btn {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-projects-body .body-content {
+    position: relative;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 50%;
+  }
 }
 
 @media screen and (min-width: 62rem) {
   .o-projects-body {
-    padding-top: 9.5rem;
-    padding-bottom: 9.5rem;
-    padding-right: 8rem;
+    position: absolute;
+    left: 0;
+    width: 55%;
+    height: 60%;
+    max-height: 80%;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
