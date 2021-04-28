@@ -751,6 +751,17 @@ a {
   height: 1.125rem;
 }
 
+.a-character-icon, .a-character-icon-primary, .a-character-icon-second {
+  display: inline-block;
+  width: 3rem;
+}
+
+@media screen and (min-width: 90rem) {
+  .a-character-icon, .a-character-icon-primary, .a-character-icon-second {
+    width: 8rem;
+  }
+}
+
 .m-text-block, .m-text-block-primary, .m-text-block-second, .m-text-block-third {
   text-align: left;
 }
@@ -836,8 +847,27 @@ a {
 }
 
 .m-card-primary-body {
+  position: relative;
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+}
+
+.m-card-primary-body .card-icon {
+  position: absolute;
+  top: -1rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .m-card-primary-body .card-icon {
+    top: 10rem;
+    left: -1rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .m-card-primary-body .card-icon {
+    left: -3rem;
+  }
 }
 
 .m-card-primary-body .a-btn-third {
@@ -1420,7 +1450,29 @@ a {
   padding-bottom: 4rem;
 }
 
-.o-projects-body .body-content .body-content-btn {
+.o-projects-body .body-content {
+  position: relative;
+}
+
+.o-projects-body .body-content .body-content-icon {
+  display: none;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-projects-body .body-content .body-content-icon {
+    display: block;
+    position: absolute;
+    right: -2rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .o-projects-body .body-content .body-content-icon {
+    right: -4rem;
+  }
+}
+
+.o-projects-body .body-content-btn {
   margin-top: 2rem;
 }
 
@@ -1475,6 +1527,12 @@ a {
   .o-footer-primary {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .o-footer-primary-heading {
+    width: 80%;
   }
 }
 

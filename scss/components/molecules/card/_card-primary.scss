@@ -13,7 +13,7 @@
 
 
 .m-card-primary-header {
-
+ 
   .md-img, .lg-img {
 
     width: 100%;
@@ -23,9 +23,25 @@
 
 
 .m-card-primary-body {
-
+  position: relative;
   @include padding-y(4.5rem);
 
+    .card-icon {
+
+      position: absolute;
+      top: -1rem;
+
+
+      @include breakpoint-up('md') {
+        top: 10rem;
+        left: -1rem;
+      }
+
+      @include breakpoint-up('lg') {
+        left: -3rem;
+      }
+
+    }
 
     .a-btn-third {
 

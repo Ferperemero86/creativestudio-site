@@ -17,6 +17,15 @@
 }
 
 
+.o-footer-primary-heading {
+
+
+  @include breakpoint-up('md') {
+    width: 80%;
+  }
+}
+
+
 .o-footer-primary-btn {
   margin-top: 3rem;
 

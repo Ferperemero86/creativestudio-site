@@ -30,8 +30,25 @@
 
 
   .body-content {
+    position: relative;
 
-    .body-content-btn {
+    .body-content-icon {
+      display: none;
+
+
+      @include breakpoint-up('md') {
+        display: block;
+        position: absolute;
+        right: -2rem;
+      }
+
+      @include breakpoint-up('lg') {
+        right: -4rem;
+      }
+    
+    }
+
+    &-btn {
 
       margin-top: 2rem;
     }
