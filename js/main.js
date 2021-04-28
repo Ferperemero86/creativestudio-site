@@ -18,28 +18,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Projects slider
   const bodyContentBtn = document.querySelector('.o-projects .body-content-btn');
-  const headerImg = document.querySelectorAll('.o-projects img');
+  const headerImg = document.querySelectorAll('.o-projects-header img');
+  const textHeading = document.querySelector('.o-projects .header-text-heading');
+  const text = document.querySelector('.o-projects .header-text-content');
+
 
   let currentIndex = 0;
   const images = ['first', 'second', 'third'];
   const imageUrls = {
-    'first' : [
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469176/creative-site/mobile/monirn1ybzxr31mh0osd.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/nyzwb1qbbsijvj8otp1y.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/nyzwb1qbbsijvj8otp1y.jpg'
-    ],
-    'second': [
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469177/creative-site/mobile/barvrsdva3ilaovzoi0k.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469271/creative-site/tablet/hgxxol6lrquoniod1hwp.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469023/creative-site/desktop/ygcdewlzhl4c5ayxqqww.jpg'
-    ],
-    'third': [
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469212/creative-site/mobile/wvufgeaa8ihtpxk0n2pv.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469271/creative-site/tablet/hgxxol6lrquoniod1hwp.jpg',
-      'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469023/creative-site/desktop/ygcdewlzhl4c5ayxqqww.jpg',
-      
-    ]
-  }
+
+    'first' : {
+      'images':
+        [
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469176/creative-site/mobile/monirn1ybzxr31mh0osd.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/nyzwb1qbbsijvj8otp1y.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/nyzwb1qbbsijvj8otp1y.jpg'
+        ],
+      'text': {
+        'heading': 'Learn Product Roadmap',
+        'content': '2019 Project'
+      }
+
+    },
+    'second' : {
+      'images':
+        [
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469177/creative-site/mobile/barvrsdva3ilaovzoi0k.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469271/creative-site/tablet/hgxxol6lrquoniod1hwp.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469023/creative-site/desktop/ygcdewlzhl4c5ayxqqww.jpg'
+        ],
+      'text': {
+        'heading': 'New Majestic Hotel',
+        'content': '2018 Project'
+      }
+    },
+    'third' : {
+      'images':
+        [
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469177/creative-site/mobile/barvrsdva3ilaovzoi0k.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/kllwr8p1ewu9ag259il5.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469021/creative-site/desktop/kllwr8p1ewu9ag259il5.jpg'
+
+        ],
+      'text': {
+        'heading': 'Crypto Dashboard',
+        'content': '2016 Project'
+      }
+    }
+
+  };
 
 
   function addClasses(classVal) {
@@ -64,6 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
       removeClasses('slide-out-left');
     }, 10); 
 
+   const currentText = imageUrls[images[currentIndex]]['text'];
+  
+   textHeading.innerHTML = currentText['heading'];
+   text.innerHTML = currentText['content'];
   }
 
  
@@ -94,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    const currentUrlImages = imageUrls[images[currentIndex]];
+    const currentUrlImages = imageUrls[images[currentIndex]]['images'];
+    
     addUrls(currentUrlImages);
 
   });
