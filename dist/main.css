@@ -453,9 +453,9 @@ a {
 }
 
 .slide-down {
-  margin-top: 21.5rem;
-  -webkit-transition-property: "opacity";
-  transition-property: "opacity";
+  margin-top: 0rem;
+  -webkit-transition-property: "margin-top";
+  transition-property: "margin-top";
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -897,18 +897,6 @@ a {
   background-color: white;
 }
 
-.o-menu-bar-primary .m-vertical-menu {
-  position: absolute;
-  right: 5rem;
-  z-index: 9999;
-}
-
-@media screen and (min-width: 62rem) {
-  .o-menu-bar-primary .m-vertical-menu {
-    display: none;
-  }
-}
-
 .o-menu-bar-primary .menu {
   display: none;
 }
@@ -1184,6 +1172,16 @@ a {
     padding-bottom: 0rem;
     padding-right: 1rem;
   }
+}
+
+.o-mobile-menu {
+  position: relative;
+  width: 100%;
+}
+
+.o-mobile-menu .m-vertical-menu {
+  position: absolute;
+  right: 1rem;
 }
 
 .o-footer, .o-footer-primary {

@@ -114,8 +114,8 @@ a {
 }
 
 .slide-down {
-  margin-top: 21.5rem;
-  @include transition('opacity', 1s);
+  margin-top: 0rem;
+  @include transition('margin-top', 1s);
 }
 
 

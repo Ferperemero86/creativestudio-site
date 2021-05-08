@@ -21,21 +21,6 @@
 
 .o-menu-bar-primary {
 
-  .m-vertical-menu {
-    position: absolute;
-    right: 5rem;
-    z-index: 9999;
-
-
-    @include breakpoint-up('md') {
-      display: none;
-    }
-  }
-
-}
-
-.o-menu-bar-primary {
-
   .menu {
     
     display: none;
