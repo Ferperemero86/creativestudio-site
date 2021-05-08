@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const verticalMenu = document.querySelector('.m-vertical-menu');
 
   hamburger.addEventListener('click', function() {
-    verticalMenu.classList.remove('slide-up');
-    verticalMenu.classList.add('slide-down');
+    verticalMenu.classList.remove('hidden');
+    verticalMenu.classList.add('show');
     hamburger.classList.add('hidden');
     closeIcon.classList.remove('hidden');
   });
 
   closeIcon.addEventListener('click', function() {
-    verticalMenu.classList.add('slide-up');
-    verticalMenu.classList.remove('slide-down');
+    verticalMenu.classList.add('hidden');
+    verticalMenu.classList.remove('show');
     hamburger.classList.remove('hidden');
     closeIcon.classList.add('hidden');
   })
