@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // Menu bar
-  const menuBar = document.querySelector('.menu-bar');
+  const mainMenu = document.querySelector('.o-main-menu');
 
   document.addEventListener('scroll', function(e) {
-    if (window.pageYOffset > menuBar.offsetTop) {
-      menuBar.classList.add('fixed');
+    if (window.pageYOffset > mainMenu.offsetTop) {
+      mainMenu.classList.add('fixed');
 
     } else {
-      menuBar.classList.remove('fixed');
+      mainMenu.classList.remove('fixed');
     }
   })
 
   // Main menu
   const hamburger = document.querySelector('.hamburger');
   const closeIcon = document.querySelector('.close-icon');
-  const verticalMenu = document.querySelector('.m-vertical-menu');
+  const mobileMenu = document.querySelector('.o-mobile-menu');
 
   hamburger.addEventListener('click', function() {
-    verticalMenu.classList.remove('hidden');
-    verticalMenu.classList.add('show');
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('show');
     hamburger.classList.add('hidden');
     closeIcon.classList.remove('hidden');
   });
 
   closeIcon.addEventListener('click', function() {
-    verticalMenu.classList.add('hidden');
-    verticalMenu.classList.remove('show');
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('show');
     hamburger.classList.remove('hidden');
     closeIcon.classList.add('hidden');
   })
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     'second' : {
       'images':
         [
-          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469177/creative-site/mobile/barvrsdva3ilaovzoi0k.jpg',
+          'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469212/creative-site/mobile/wvufgeaa8ihtpxk0n2pv.jpg',
           'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469271/creative-site/tablet/hgxxol6lrquoniod1hwp.jpg',
           'https://res.cloudinary.com/dby4kdmbv/image/upload/v1617469023/creative-site/desktop/ygcdewlzhl4c5ayxqqww.jpg'
         ],

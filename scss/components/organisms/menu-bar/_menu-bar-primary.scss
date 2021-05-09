@@ -12,12 +12,6 @@
 
 }
 
-.o-menu-bar-primary.fixed {
-  position: fixed;
-  z-index: 9999;
-  @include bg-color('second');
-}
-
 
 .o-menu-bar-primary {
 

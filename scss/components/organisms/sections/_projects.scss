@@ -14,14 +14,18 @@
 .o-projects-header {
   position: relative;
   width: 100%;
-  height: 30rem;
   overflow: hidden;
   @include bg-color('primary');
 
   .header-title {
     position: absolute;
-    bottom: 6rem;
+    bottom: 2rem;
     right: 3rem;
+
+    
+    @include breakpoint-up('md') {
+      bottom: 6rem;
+    }
   }
 
 
@@ -36,11 +40,13 @@
 .o-projects-body {
   width: 100%;
   @include bg-color('primary');
-  @include padding-y(4rem);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 
 
   .body-content {
     position: relative;
+
 
     &-icon {
       display: none;

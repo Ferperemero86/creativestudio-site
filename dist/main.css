@@ -460,6 +460,12 @@ a {
           transition-duration: 1s;
 }
 
+.fixed {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+}
+
 .a-btn, .a-btn-primary, .a-btn-second, .a-btn-third, .a-btn-nav {
   text-align: center;
   border: 0;
@@ -891,12 +897,6 @@ a {
   }
 }
 
-.o-menu-bar-primary.fixed {
-  position: fixed;
-  z-index: 9999;
-  background-color: white;
-}
-
 .o-menu-bar-primary .menu {
   display: none;
 }
@@ -1102,15 +1102,20 @@ a {
 .o-projects-header {
   position: relative;
   width: 100%;
-  height: 30rem;
   overflow: hidden;
   background-color: black;
 }
 
 .o-projects-header .header-title {
   position: absolute;
-  bottom: 6rem;
+  bottom: 2rem;
   right: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .o-projects-header .header-title {
+    bottom: 6rem;
+  }
 }
 
 @media screen and (min-width: 62rem) {
@@ -1123,8 +1128,8 @@ a {
 .o-projects-body {
   width: 100%;
   background-color: black;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .o-projects-body .body-content {
@@ -1181,7 +1186,14 @@ a {
 
 .o-mobile-menu .m-vertical-menu {
   position: absolute;
+  z-index: 9999;
   right: 1rem;
+}
+
+.o-main-menu {
+  background-color: white;
+  width: 100%;
+  height: auto;
 }
 
 .o-footer, .o-footer-primary {

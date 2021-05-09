@@ -118,6 +118,14 @@ a {
   @include transition('margin-top', 1s);
 }
 
+// Positioning //
+
+.fixed {
+  position: fixed;
+  z-index: 9999;
+  @include bg-color('second');
+}
+
 
 
 
